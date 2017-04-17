@@ -58,7 +58,9 @@ Run phpMyAdmin
 
     docker run --name myadmin -d --link test-mysql:db -p $PHPMYADMIN_PORT:80 phpmyadmin/phpmyadmin
 
-Execute database.sql in phpMyAdmin (make sure to uncheck Foreign Key Checking during SQL import).
+Execute database.sql in phpMyAdmin (make sure to uncheck Foreign Key Checking during SQL import) manually.
+
+Run the Nette application:
 
     docker run -d --name nette-quickstart -p $APPLICATION_PORT:80 --link test-mysql:db nette-quickstart-img
 
